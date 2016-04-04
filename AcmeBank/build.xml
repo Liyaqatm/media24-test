@@ -11,7 +11,7 @@
     <property name="target" value="1.7"/>
     <property name="source" value="1.7"/>
     <path id="JUnit 4.libraryclasspath">
-        <pathelement location="/lib/junit-4.12.jar"/>
+        <pathelement location="./lib/junit-4.12.jar"/>
     </path>
     <path id="AcmeBank.classpath">
         <pathelement location="bin"/>
