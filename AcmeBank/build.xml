@@ -20,6 +20,7 @@
 	<path id="AcmeBank.classpath">
 		<pathelement location="bin" />
 		<path refid="JUnit 4.libraryclasspath" />
+		<path refid="Hamcrest.libraryclasspath" />
 	</path>
 	<target name="init">
 		<mkdir dir="bin"/>
