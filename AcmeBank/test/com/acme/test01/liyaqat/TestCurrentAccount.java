@@ -1,7 +1,5 @@
 package com.acme.test01.liyaqat;
 
-import static org.junit.Assert.*;
-
 import org.junit.*;
 
 import com.acme.test01.liyaqat.exceptions.AccountNotFoundException;
@@ -40,11 +38,31 @@ public class TestCurrentAccount {
 		Assert.fail("Expected to throw a AccountNotFoundException");
 	}
 	
+	
 	@Test
 	public void testOpenCurrentAccount(){
 		CurrentAccount currentAccount  = new CurrentAccount();
 		currentAccount.openCurrentAccount(7L);
 		//methods do not return anything
+		//it would be nice to if the method returned a status.
+	}
+	
+	@Test
+	public void testDeposit() throws AccountNotFoundException {
+		CurrentAccount currentAccount  = new CurrentAccount();
+		currentAccount.deposit(4L, 500);
+	}
+	
+	@Test
+	public void testDepositIntoNonExistentAccount() throws AccountNotFoundException {
+		CurrentAccount currentAccount  = new CurrentAccount();
+		try {
+			currentAccount.deposit(100L, 500);
+		} catch (AccountNotFoundException accountNotFoundException) {
+			// expected
+			return;
+		}
+		Assert.fail("Expected to throw a AccountNotFoundException");
 	}
 	
 }
