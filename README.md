@@ -13,5 +13,11 @@ To run the application please do the following:
    * ant TestSavingsAccount
    * ant TestCurrentAccount
    
+Improvements:
+
+1. Use a DAO to access the DB values
+2. Check the types of the objects
+3. Return statuses
+4. Logging status of methods
 
 Thank you
